@@ -19,7 +19,7 @@
           <section class="todoapp__main" data-cy="TodoList">
             <div data-cy="Todo" class="todo completed">
               <label class="todo__status-label"
-                ><input data-cy="TodoStatus" type="checkbox" class="todo__status" checked=""
+                ><input data-cy="TodoStatus" type="checkbox" class="todo__status" checked="true"
               /></label>
               <span data-cy="TodoTitle" class="todo__title">dfgd</span
               ><button type="button" class="todo__remove" data-cy="TodoDelete">×</button>
@@ -30,7 +30,7 @@
             </div>
             <div data-cy="Todo" class="todo completed">
               <label class="todo__status-label"
-                ><input data-cy="TodoStatus" type="checkbox" class="todo__status" checked=""
+                ><input data-cy="TodoStatus" type="checkbox" class="todo__status" checked="true"
               /></label>
               <span data-cy="TodoTitle" class="todo__title">dddrtetrf</span
               ><button type="button" class="todo__remove" data-cy="TodoDelete">×</button>
@@ -41,7 +41,7 @@
             </div>
             <div data-cy="Todo" class="todo completed">
               <label class="todo__status-label"
-                ><input data-cy="TodoStatus" type="checkbox" class="todo__status" checked=""
+                ><input data-cy="TodoStatus" type="checkbox" class="todo__status" checked="true"
               /></label>
               <span data-cy="TodoTitle" class="todo__title">hfd</span
               ><button type="button" class="todo__remove" data-cy="TodoDelete">×</button>
