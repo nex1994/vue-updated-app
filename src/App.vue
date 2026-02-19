@@ -1,3 +1,15 @@
+<script>
+import tasks from './todos'
+
+export default {
+  data() {
+    return {
+      tasks,
+    }
+  },
+}
+</script>
+
 <template>
   <body data-new-gr-c-s-check-loaded="14.1274.0" data-gr-ext-installed="">
     <div id="root">
@@ -17,44 +29,18 @@
             </form>
           </header>
           <section class="todoapp__main" data-cy="TodoList">
-            <div data-cy="Todo" class="todo completed">
+            <div
+              v-for="task in tasks"
+              data-cy="Todo"
+              class="todo"
+              :class="{
+                completed: task.completed,
+              }"
+            >
               <label class="todo__status-label"
-                ><input data-cy="TodoStatus" type="checkbox" class="todo__status" checked="true"
+                ><input data-cy="TodoStatus" type="checkbox" class="todo__status" checked=""
               /></label>
-              <span data-cy="TodoTitle" class="todo__title">dfgd</span
-              ><button type="button" class="todo__remove" data-cy="TodoDelete">×</button>
-              <div data-cy="TodoLoader" class="modal overlay">
-                <div class="modal-background has-background-white-ter"></div>
-                <div class="loader"></div>
-              </div>
-            </div>
-            <div data-cy="Todo" class="todo completed">
-              <label class="todo__status-label"
-                ><input data-cy="TodoStatus" type="checkbox" class="todo__status" checked="true"
-              /></label>
-              <span data-cy="TodoTitle" class="todo__title">dddrtetrf</span
-              ><button type="button" class="todo__remove" data-cy="TodoDelete">×</button>
-              <div data-cy="TodoLoader" class="modal overlay">
-                <div class="modal-background has-background-white-ter"></div>
-                <div class="loader"></div>
-              </div>
-            </div>
-            <div data-cy="Todo" class="todo completed">
-              <label class="todo__status-label"
-                ><input data-cy="TodoStatus" type="checkbox" class="todo__status" checked="true"
-              /></label>
-              <span data-cy="TodoTitle" class="todo__title">hfd</span
-              ><button type="button" class="todo__remove" data-cy="TodoDelete">×</button>
-              <div data-cy="TodoLoader" class="modal overlay">
-                <div class="modal-background has-background-white-ter"></div>
-                <div class="loader"></div>
-              </div>
-            </div>
-            <div data-cy="Todo" class="todo">
-              <label class="todo__status-label"
-                ><input data-cy="TodoStatus" type="checkbox" class="todo__status"
-              /></label>
-              <span data-cy="TodoTitle" class="todo__title">asd</span
+              <span data-cy="TodoTitle" class="todo__title">{{ task.title }}</span
               ><button type="button" class="todo__remove" data-cy="TodoDelete">×</button>
               <div data-cy="TodoLoader" class="modal overlay">
                 <div class="modal-background has-background-white-ter"></div>
